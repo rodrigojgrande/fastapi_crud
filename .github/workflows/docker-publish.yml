@@ -32,6 +32,6 @@ jobs:
       - name: Build and push Docker image
         run: |
           # Constrói a imagem com a tag do commit atual (github.sha)
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-crud:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/fastapi:${{ github.sha }} .
           # Envia (push) a imagem para o DockerHub
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-crud:${{ github.sha }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/fastapi:${{ github.sha }}
